@@ -26,10 +26,28 @@ Then /^I should get an confirmation mail$/ do
 	end
 end
 
-When /^I fill in a "(.*?)" username$/ do |arg1|
-	pending # express the regexp above with the code you wish you had
+When /^I fill in a "(.*?)" username$/ do |type|
+	if type == 'valid'
+		fill_in("user", :with => "typo3Plonk")
+		fill_in("pass", :with => "plonk1234")
+	else
+		pending
+	end
 end
 
-Then /^I should see "(.*?)"$/ do |arg1|
-	pending # express the regexp above with the code you wish you had
+Given /^that I am logged in$/ do
+	steps %Q{
+		When I open the login popup
+		And I fill in a "valid" username
+		And I press "Login"
+		Then I should see "My account"
+	}
+end
+
+Then /^I should see "(.*?)"$/ do |text|
+	page.should have_xpath("//a/text()[ . = '#{text}']")
+end
+
+Then /^I logout$/ do
+	click_on('Logout')
 end

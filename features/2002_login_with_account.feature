@@ -1,7 +1,6 @@
-@login
 Feature: Login with my TYPO3 username on typo3.org
 
-  @skipped
+  @long
   Scenario: Visit TYPO3.org with a valid username and password
     Given I am on home
     When I open the login popup
