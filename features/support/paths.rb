@@ -19,6 +19,8 @@ module NavigationHelpers
 				"http://#{domain}/my-account/sign-up/"
 			when /edit-personal-data/
 				"http://#{domain}/my-account/edit-personal-data/"
+			when /professional-service-listing/
+				"http://#{domain}/support/professional-services/"
 			else
 				raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
 						  "Now, go and add a mapping in #{__FILE__}"
