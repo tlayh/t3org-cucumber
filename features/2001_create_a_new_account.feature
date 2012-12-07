@@ -1,6 +1,6 @@
 Feature: Create a new account for TYPO3 org
 
-  @skipped @javascript
+  @skipped @long
   Scenario: Visit TYPO3.org and create a new account
     Given I am on home
     When I open the login popup

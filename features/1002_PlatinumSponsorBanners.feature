@@ -1,6 +1,6 @@
 Feature: Pages hold two or more Platinum Sponsor banners
 
-  @javascript @long
+  @long
   Scenario Outline: Homepage has 4 sponsor banners
     Given I am on <page_name>
     Then I should see <amount> active sponsor banners

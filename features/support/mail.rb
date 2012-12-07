@@ -10,7 +10,7 @@ module MailHelpers
 	end
 
 	def mails_for(username)
-		xml = Net::HTTP.get(URI.parse('http://www.mmmmail.com/t3ts1341698232.xml'))
+		xml = Net::HTTP.get(URI.parse("http://www.mmmmail.com/#{username}.xml"))
 		doc = Document.new(xml)
 		mails = []
 		REXML::XPath.each(doc, '//channel/item') do |el|

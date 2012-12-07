@@ -17,7 +17,9 @@ Then /^I should see user profiles$/ do
 end
 
 Then /^forge activity messages$/ do
-	assert page.all(:xpath, "//*[@id='forge-ticker']/*//li[@class='slide']").length >= 10
+	wait_until(20) do
+		assert page.all(:xpath, "//*[@id='forge-ticker']/*//li[@class='slide']").length >= 10
+	end
 end
 
 Then /^I should see the first item going active$/ do

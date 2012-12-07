@@ -5,7 +5,7 @@ end
 
 When /^I fill in new user data$/ do
 	@username = "t3ts" + Time.now.to_i.to_s
-#  print @username
+	print @username
 	fill_in("Name", :with => "Test user")
 	fill_in("E-mail", :with => mail_address_for(@username))
 	fill_in("Username", :with => @username)
@@ -20,7 +20,7 @@ Then /^I should see the confirmation$/ do
 end
 
 Then /^I should get an confirmation mail$/ do
-	wait_until(10) do
+	wait_until(20) do
 		mails = mails_for(@username)
 		mails.count { |d| d[:title] == 'Registration at ' + current_domain } == 1
 	end

@@ -5,9 +5,6 @@ require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'capybara/session'
 
-#Selenium
-#require "selenium-webdriver"
-
 require 'capybara-webkit'
 
 Capybara.default_selector = :css

@@ -1,6 +1,6 @@
 Feature: The TER is searchable, sortable and provides extension details
 
-  @skipped @javascript
+  @skipped
   Scenario: Open TER and check extension list
     Given I am on ter
     And I see 20 extensions
@@ -14,7 +14,7 @@ Feature: The TER is searchable, sortable and provides extension details
     Then I should see 20 extensions
     And tt_news appears as first extension
 
-  @skipped @javascript
+  @skipped
   Scenario Outline: Open TER supports searches and has accurate results
     Given I am on ter
     When I search <term>

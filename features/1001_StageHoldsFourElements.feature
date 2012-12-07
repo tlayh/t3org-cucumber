@@ -1,6 +1,5 @@
 Feature: The stage has four elements which keep rotating
 
-  @javascript
   @long
   Scenario: Visit TYPO3.org and check the stage items
     Given I am on home
