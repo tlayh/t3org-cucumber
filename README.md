@@ -14,16 +14,16 @@ After the vagrant box is up and running:
 
 1. Install RVM (Ruby Version Manager): https://rvm.io/rvm/install/
 
-\curl -L https://get.rvm.io | bash -s stable --ruby
+> \curl -L https://get.rvm.io | bash -s stable --ruby
 
 This will install ruby and more
 
 2. Install required packages
 
-sudo aptitude install libxml2 build-essential ruby1.9.1-dev libxslt1-dev g++ postgresql libpq-dev
-sudo aptitude install qt4-qmake
-sudo apt-get install libqt4-dev
-sudo aptitude install xvfb
+> sudo aptitude install libxml2 build-essential ruby1.9.1-dev libxslt1-dev g++ postgresql libpq-dev
+> sudo aptitude install qt4-qmake
+> sudo apt-get install libqt4-dev
+> sudo aptitude install xvfb
 
 2. Copy the Gemfile from this package
 
