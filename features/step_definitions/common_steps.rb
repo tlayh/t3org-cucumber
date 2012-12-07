@@ -19,3 +19,7 @@ Then /^I should see them changing$/ do
 		page.should have_xpath(@path.gsub!(/OLDVALUE/, @oldvalue))
 	end
 end
+
+Given /^PENDING/ do
+	pending
+end

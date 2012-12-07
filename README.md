@@ -21,16 +21,26 @@ This will install ruby and more
 2. Install required packages
 
 > sudo aptitude install libxml2 build-essential ruby1.9.1-dev libxslt1-dev g++ postgresql libpq-dev
+
 > sudo aptitude install qt4-qmake
+
 > sudo apt-get install libqt4-dev
+
 > sudo aptitude install xvfb
 
-2. Copy the Gemfile from this package
+3. Copy the Gemfile from this package
 
-3. Install required gems that are in the Gemfile by using
---> bundle install
+4. Install required gems that are in the Gemfile by using
+> bundle install
+
 in the directory where the Gemfile is located
 
+Usage cucumber
+===============
+
+If a scenario is still not ready to be tested, add the following in the first line of the scenario:
+
+> Given PENDING: <add a message here>
 
 # add oh-my-zsh if you want
 sudo apt-get install zsh
