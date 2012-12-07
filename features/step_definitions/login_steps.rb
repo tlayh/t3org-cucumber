@@ -25,3 +25,11 @@ Then /^I should get an confirmation mail$/ do
 		mails.count { |d| d[:title] == 'Registration at ' + current_domain } == 1
 	end
 end
+
+When /^I fill in a "(.*?)" username$/ do |arg1|
+	pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see "(.*?)"$/ do |arg1|
+	pending # express the regexp above with the code you wish you had
+end
