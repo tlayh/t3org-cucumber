@@ -21,6 +21,7 @@ Before('@skipped') do |scenario|
 end
 
 Before do
-	Capybara.reset_sessions!
-	Capybara.use_default_driver
+	Capybara.current_session.driver.reset!
+	#Capybara.reset_sessions!
+	#Capybara.use_default_driver
 end
