@@ -1,7 +1,6 @@
 Feature: News can be commented
 
-  Scenario: Comments are available
-
+  @long
   Scenario: I can comment and after I am logged out I can see my comment
     Given I am on home
     And that I am logged in

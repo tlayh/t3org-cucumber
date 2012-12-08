@@ -19,3 +19,8 @@ end
 Before('@skipped') do |scenario|
 	scenario.skip_invoke!
 end
+
+Before do
+	Capybara.reset_sessions!
+	Capybara.use_default_driver
+end
