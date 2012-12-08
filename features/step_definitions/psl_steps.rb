@@ -1,3 +1,3 @@
-Then /^I should see (\d+) platinum members$/ do |numMember|
-	wait_until { page.should have_xpath("//td[@class='s-membership']") }
+Then /^I should see the listing$/ do
+	wait_until { page.should have_xpath("//*[@class='s-membership']") }
 end

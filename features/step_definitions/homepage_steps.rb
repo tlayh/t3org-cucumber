@@ -1,7 +1,7 @@
 When /^I (open|close) the social area$/ do |state|
-	notState = state == 'open' ? 'close' : 'open'
+	not_state = state == 'open' ? 'close' : 'open'
 	unless page.should have_xpath("//*[@class='b-social b-social-#{state}']")
-		page.should have_xpath("//*[@class='b-social b-social-#{notState}']")
+		page.should have_xpath("//*[@class='b-social b-social-#{not_state}']")
 		find(:xpath, "//*[@class='b-social-toggle']]").click
 	end
 	page.should have_xpath("//*[@class='b-social b-social-#{state}']")

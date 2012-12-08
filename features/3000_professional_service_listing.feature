@@ -1,6 +1,6 @@
 Feature: Profeessional service listing
 
   @skipped @long
-  Scenario: Visit profession service listing and count platinum members
+  Scenario: Visit profession service listing
     Given I am on professional-service-listing
-    Then I should see 4 platinum members
+    Then I should see the listing

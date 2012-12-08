@@ -1,7 +1,7 @@
-Feature: Create a new account for TYPO3 org
+Feature: Create no new account for TYPO3 org cause of invalid user data
 
-  @long
-  Scenario Outline: Visit TYPO3.org and test invalid usernames
+  @skipped @long
+  Scenario: Visit TYPO3.org and test invalid usernames
     Given I am on home
     When I open the login popup
     And I follow "Sign up!"

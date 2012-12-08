@@ -8,7 +8,6 @@ at_exit do
 #system "open ./reports/report.html"
 end
 
-
 Before ('@long') do
 	Capybara.default_wait_time = 30
 end

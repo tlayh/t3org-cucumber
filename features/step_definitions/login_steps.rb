@@ -35,8 +35,8 @@ When /^I fill in invalid (.*) data$/ do |invalid_username|
 end
 
 Then /^I should see an error message$/ do
-	@x = 'Username must be at least 3 characters and can contain 0-9 a-z - _ only.'
-	page.should have_xpath("//*/text()[contains(., '#{@x}')]")
+	@test_string = 'Username must be at least 3 characters and can contain 0-9 a-z - _ only.'
+	page.should have_xpath("//*/text()[contains(., '#{@test_string}')]")
 end
 
 When /^I fill in a "(.*?)" username$/ do |type|
