@@ -31,7 +31,8 @@ When /^I fill in a "(.*?)" username$/ do |type|
 		fill_in("user", :with => "typo3Plonk")
 		fill_in("pass", :with => "plonk1234")
 	else
-		pending
+		fill_in("user", :with => "nothingHere")
+		fill_in("pass", :with => "totoalUnusedPassword")
 	end
 end
 
@@ -45,7 +46,7 @@ Given /^that I am logged in$/ do
 end
 
 Then /^I should see "(.*?)"$/ do |text|
-	page.should have_xpath("//a/text()[ . = '#{text}']")
+	page.should have_xpath("//*/text()[ . = '#{text}']")
 end
 
 Then /^I logout$/ do
