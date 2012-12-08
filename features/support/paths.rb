@@ -1,7 +1,7 @@
 module NavigationHelpers
 
 	def current_domain
-		ENV['domain'] ? ENV['domain'] : 'www.latest.dev.t3o.typo3.org/'
+		ENV['domain'] ? ENV['domain'] : 'www.latest.dev.t3o.typo3.org'
 	end
 
 	def path_to(page_name)

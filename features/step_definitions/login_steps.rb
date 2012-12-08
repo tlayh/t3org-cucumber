@@ -25,6 +25,20 @@ Then /^I should get an confirmation mail$/ do
 	end
 end
 
+When /^I fill in invalid (.*) data$/ do |invalid_username|
+	@username = "t3ts" + Time.now.to_i.to_s
+	fill_in("Name", :with => "Test user")
+	fill_in("E-mail", :with => mail_address_for(@username))
+	fill_in("Username", :with => invalid_username)
+	fill_in("Password", :with => @username + "!#")
+	fill_in("Repeat", :with => @username + "!#")
+end
+
+Then /^I should see an error message$/ do
+	@x = 'Username must be at least 3 characters and can contain 0-9 a-z - _ only.'
+	page.should have_xpath("//*/text()[contains(., '#{@x}')]")
+end
+
 When /^I fill in a "(.*?)" username$/ do |type|
 	if type == 'valid'
 		fill_in("user", :with => "typo3Plonk")
