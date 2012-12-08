@@ -5,7 +5,6 @@ end
 
 When /^I fill in new user data$/ do
 	@username = "t3ts" + Time.now.to_i.to_s
-	print @username
 	fill_in("Name", :with => "Test user")
 	fill_in("E-mail", :with => mail_address_for(@username))
 	fill_in("Username", :with => @username)
