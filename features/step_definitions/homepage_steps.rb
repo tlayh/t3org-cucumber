@@ -18,7 +18,7 @@ end
 
 Then /^forge activity messages$/ do
 	wait_until(20) do
-		assert page.all(:xpath, "//*[@id='forge-ticker']/*//li[@class='slide']").length >= 10
+		assert page.all(:xpath, "//*[@id='forge-ticker']/*//li[@class='slide']").length >= 5
 	end
 end
 
